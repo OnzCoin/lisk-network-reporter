@@ -1,8 +1,8 @@
 FROM node:8.1.2
 RUN apt-get update
 RUN apt-get install sudo
-RUN git clone https://github.com/karek314/lisk-network-reporter/
+RUN git clone hhttps://github.com/OnzCoin/onz-network-reporter/
 ADD ./postinstall.sh /
 RUN chmod +x /postinstall.sh
 ENTRYPOINT /postinstall.sh
-WORKDIR /lisk-network-reporter
+WORKDIR /onz-network-reporter

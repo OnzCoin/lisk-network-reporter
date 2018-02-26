@@ -1,14 +1,14 @@
-Lisk Network Reporter
+Onz Network Reporter
 ============
-This is the backend service which runs along with Lisk and tracks the network status, fetches information through api and connects through WebSockets to [lisk-network-stats](https://github.com/karek314/lisk-network-stats) to feed information.
+This is the backend service which runs along with Onz and tracks the network status, fetches information through api and connects through WebSockets to [onz-network-stats](https://github.com/OnzCoin/onz-network-stats) to feed information.
 
 ## Prerequisite
-* lisk up and running
+* onz up and running
 * node
 * npm
 
 ## Installation
-<pre>git clone https://github.com/karek314/lisk-network-reporter/ && cd lisk-network-reporter && bash build.sh</pre>
+<pre>git clone https://github.com/OnzCoin/onz-network-reporter/ && cd onz-network-reporter && bash build.sh</pre>
 
 ## Configuration
 <pre>nano app.json</pre>
@@ -17,7 +17,7 @@ And modify
 <pre>
 [
   {
-    "name"              : "lisk-network-reporter",
+    "name"              : "onz-network-reporter",
     "script"            : "app.js",
     "log_date_format"   : "YYYY-MM-DD HH:mm Z",
     "merge_logs"        : false,
@@ -31,11 +31,11 @@ And modify
       "RPC_HOST"        : "localhost",
       "RPC_PORT"        : "8000", <- 8000 for mainnet, 7000 testnet
       "LISTENING_PORT"  : "8000", <- 8000 for mainnet, 7000 testnet
-      "INSTANCE_NAME"   : "", <- add your lisk address here or a custom name if you do voluntary work
-      "CONTACT_DETAILS" : "", <- contact details, email or nick on lisk.chat to contact in case any failure
+      "INSTANCE_NAME"   : "", <- add your onz address here or a custom name if you do voluntary work
+      "CONTACT_DETAILS" : "", <- contact details, email or nick on OnzCoin discord to contact in case any failure
       "NETWORK_MODE"    : "main",
-      "WS_SERVER"       : "ws://report.liskstats.net:3000",
-      "WS_SECRET"       : "Go to https://lisk.chat and ask around",
+      "WS_SERVER"       : "ws://stats.onzcoin.com:3000",
+      "WS_SECRET"       : "Go to OnzCoin discord and ask around",
       "VERBOSITY"       : 0
     }
   }
@@ -50,17 +50,17 @@ pm2 start app.json --watch
 
 Checking logs
 <pre>
-pm2 logs lisk-network-reporter
+pm2 logs onz-network-reporter
 </pre>
 
 Stopping
 <pre>
-pm2 stop lisk-network-reporter
+pm2 stop onz-network-reporter
 </pre>
 
 ## Generating a startup script
 
-Before generating a startup script, make sure your Lisk node has also a startup mechanism on reboot (with crontab for example).
+Before generating a startup script, make sure your Onz node has also a startup mechanism on reboot (with crontab for example).
 
 Now, let pm2 detect available init system, generate configuration and enable startup system:
 
@@ -94,7 +94,7 @@ For more information:  [Official PM2 Startup Script page](http://pm2.keymetrics.
 You can run this container via docker by executing:
 
 ```
-docker run -d -e RPC_HOST='your lisk node ip or hostname' -e INSTANCE_NAME='your lisk address' -e WS_SECRET="the liskstats secret" -e CONTACT_DETAILS="your contact details" -v /etc/localtime:/etc/localtime:ro docker-lisk-network-reporter:latest
+docker run -d -e RPC_HOST='your onz node ip or hostname' -e INSTANCE_NAME='your onz address' -e WS_SECRET="the onzstats secret" -e CONTACT_DETAILS="your contact details" -v /etc/localtime:/etc/localtime:ro docker-onz-network-reporter:latest
 ```
 
 Confurable ENV variables:
@@ -112,6 +112,7 @@ VERBOSITY
 
 
 ## Credits
-1. To [cuberdo](https://github.com/cubedro/) and his [eth-net-intelligence-api](https://github.com/cubedro/eth-net-intelligence-api). It's foundation used for lisk-network-reporter.
+1. To [cuberdo](https://github.com/cubedro/) and his [eth-net-intelligence-api](https://github.com/cubedro/eth-net-intelligence-api). It's foundation used for onz-network-reporter.
 2. [5an1ty](https://github.com/5an1ty/) for creating support for Docker.
 3. [hirishh](https://github.com/hirishh) for pm2 auto startup guide.
+4. [karek314](https://github.com/karek314) for providing all those related information.

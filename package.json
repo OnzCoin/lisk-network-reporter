@@ -1,6 +1,6 @@
 {
-  "name": "lisk-net-intelligence-api",
-  "description": "Lisk Network Intelligence API",
+  "name": "onz-net-intelligence-api",
+  "description": "Onz Network Intelligence API",
   "version": "1.0.0",
   "private": true,
   "main": "./app.js",
@@ -23,17 +23,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/karek314/lisk-network-reporter.git"
+    "url": "https://github.com/OnzCoin/onz-network-reporter.git"
   },
-  "homepage": "https://github.com/karek314/lisk-network-reporter",
+  "homepage": "https://github.com/OnzCoin/onz-network-reporter",
   "bugs": {
-    "url": "https://github.com/karek314/lisk-network-reporter/issues"
+    "url": "https://github.com/OnzCoin/onz-network-reporter/issues"
   },
   "keywords": [
-    "ethereum",
-    "network",
+    "onzcoin",
+    "monitoring",
     "intelligence",
-    "API"
+    "API",
+    "dpos"
   ],
   "authors": [
     {
@@ -47,6 +48,12 @@
       "email": "karek314@protionmail.com",
       "url": "https://github.com/karek314",
       "description": "Forked and adapted for Lisk Network"
+    },
+    {
+      "name": "OnzCoin",
+      "email": "hi@onzcoin.com",
+      "url": "https://github.com/OnzCoin",
+      "description": "Forked and adapted for Onz Network"
     }
   ],
   "license": "LGPL-3.0"

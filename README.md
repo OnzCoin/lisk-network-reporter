@@ -29,8 +29,8 @@ And modify
     {
       "NODE_ENV"        : "production",
       "RPC_HOST"        : "localhost",
-      "RPC_PORT"        : "8000", <- 8000 for mainnet, 7000 testnet
-      "LISTENING_PORT"  : "8000", <- 8000 for mainnet, 7000 testnet
+      "RPC_PORT"        : "11000", <- 11000 for mainnet, 10998 testnet
+      "LISTENING_PORT"  : "11000", <- 11000 for mainnet, 10998 testnet
       "INSTANCE_NAME"   : "", <- add your onz address here or a custom name if you do voluntary work
       "CONTACT_DETAILS" : "", <- contact details, email or nick on OnzCoin discord to contact in case any failure
       "NETWORK_MODE"    : "main",

@@ -12,8 +12,8 @@
     {
       "NODE_ENV"        : "production",
       "RPC_HOST"        : "localhost",
-      "RPC_PORT"        : "8000",
-      "LISTENING_PORT"  : "8000",
+      "RPC_PORT"        : "11000",
+      "LISTENING_PORT"  : "11000",
       "INSTANCE_NAME"   : "PICK_INSTANCE_NAME",
       "CONTACT_DETAILS" : "",
       "NETWORK_MODE"    : "main",
